@@ -257,8 +257,29 @@ elif page == "📈 Model Analytics":
 
 # ------------------- PAGE: ABOUT -------------------
 elif page == "ℹ️ About":
-    st.title("About")
+    st.title("About this App")
     st.markdown("""
-    This app is built by **Shyam Sunder** using Streamlit & Scikit-Learn.  
-    It predicts employee salary based on professional and personal attributes.
+    ### 💼 Salary Predictor App
+
+    Welcome to the **AI-powered Salary Predictor**, a smart tool designed to estimate employee salaries based on multiple professional and educational attributes.
+
+    #### 🔧 Built With:
+    - **Streamlit** – for the interactive web interface
+    - **Scikit-Learn** – for model training and prediction
+    - **Plotly & Matplotlib** – for rich visual analytics
+    - **Pandas & NumPy** – for data manipulation and preprocessing
+
+    #### 📌 Key Features:
+    - Predicts salary using a trained **Random Forest Regressor**
+    - Upload your own dataset for real-time salary evaluation
+    - Interactive model evaluation with charts & metrics
+    - Downloadable PDF report of predictions (coming soon)
+
+    #### 👨‍💻 Developer:
+    - Built by **Shyam Sunder**
+    - [GitHub](https://github.com/sc1030) | [LinkedIn](https://linkedin.com/in/shyam-sunder)
+
+    ---
+    _Empowering HR & recruitment professionals with data-driven insights._
     """)
+

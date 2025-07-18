@@ -14,7 +14,7 @@ import numpy as np
 import pandas as pd
 import joblib
 import matplotlib.pyplot as plt
-import plotly.express as px
+
 from fpdf import FPDF
 import tempfile
 

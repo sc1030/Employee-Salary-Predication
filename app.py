@@ -15,7 +15,7 @@ import pandas as pd
 import joblib
 import matplotlib.pyplot as plt
 
-
+import plotly.express as px
 import tempfile
 
 # --- Page Config ---

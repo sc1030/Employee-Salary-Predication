@@ -1,4 +1,14 @@
 # app.py
+from tkinter import _test
+from seaborn import displot
+import seaborn as sns
+from sklearn.base import ClassifierMixin
+from sklearn.metrics import r2_score
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+
+from sklearn.metrics import mean_absolute_error
+from sklearn.metrics import roc_curve, roc_auc_score
 import streamlit as st
 import numpy as np
 import pandas as pd
@@ -215,12 +225,35 @@ elif page == "📊 Data Exploration":
 
 # ------------------- PAGE: MODEL ANALYTICS -------------------
 elif page == "📈 Model Analytics":
-    st.title("Model Info")
-    st.markdown("""
-    - Model: RandomForestRegressor  
-    - Features: Age, Education, Occupation, Experience, Certifications, Bonus, etc.  
-    - Pipeline: ColumnTransformer + StandardScaler + OneHotEncoder  
-    """)
+
+
+    # Scatter plot
+    with st.expander("📈 Scatter Plot: Actual vs Predicted Salary"):
+        # Example: Generate sample data if y_test and y_pred are not available
+        sample_size = 100
+        y_test = np.random.randint(300000, 2000000, sample_size)
+        y_pred = y_test + np.random.normal(0, 100000, sample_size)
+        fig, ax = plt.subplots()
+        ax.scatter(y_test, y_pred, alpha=0.5, color='blue')
+        ax.plot([y_test.min(), y_test.max()], [y_test.min(), y_test.max()], color='red', linestyle='--')
+        ax.set_xlabel("Actual Salary")
+        ax.set_ylabel("Predicted Salary")
+        ax.set_title("Actual vs Predicted Salary")
+        st.pyplot(fig)
+
+    # Line plot
+    with st.expander("📉 Line Plot: Actual vs Predicted Salary"):
+        fig, ax = plt.subplots()
+        ax.plot(pd.Series(y_test).reset_index(drop=True), label="Actual", marker='o', color='blue')
+        ax.plot(pd.Series(y_pred), label="Predicted", marker='x', color='red')
+        ax.set_xlabel("Sample Index")
+        ax.set_ylabel("Salary")
+        ax.set_title("Actual vs Predicted Salary Over Samples")
+        ax.legend()
+        st.pyplot(fig)
+
+
+
 
 # ------------------- PAGE: ABOUT -------------------
 elif page == "ℹ️ About":

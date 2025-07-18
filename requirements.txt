@@ -1,21 +1,18 @@
-
-Flask
-Flask
+streamlit
 scikit-learn
 pandas
 numpy
 matplotlib
-seaborn 
-shap
+seaborn
+plotly
 joblib
-Werkzeug
-Jinja2
-MarkupSafe
-click
-itsdangerous
-gunicorn
 fpdf
-# Essential build tools
+
+# Optional: for PDF export and style
+jinja2
+markupsafe
+
+# Compatible build tools
 setuptools==68.1.2
 wheel==0.41.3
 pip==23.3.1

@@ -1,5 +1,5 @@
 # app.py
-from tkinter import _test
+
 from seaborn import displot
 import seaborn as sns
 from sklearn.base import ClassifierMixin

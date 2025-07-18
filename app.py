@@ -15,7 +15,7 @@ import pandas as pd
 import joblib
 import matplotlib.pyplot as plt
 
-from fpdf import FPDF
+
 import tempfile
 
 # --- Page Config ---
